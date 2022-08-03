@@ -105,8 +105,8 @@
     transform: to-upper-case;
   }
   .dashboard article h5 {
-    max-width: 59px;
-    width: 99%;
+    max-width: 79px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     font-size: max(0.6vw, 0.2rem);
