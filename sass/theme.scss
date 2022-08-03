@@ -1,0 +1,470 @@
+// theme sombre
+
+body{
+     background-color: $Very_Dark_Blue;
+
+}
+
+body .dashboard{
+
+
+ header h1 {
+    
+     color: $White;
+    
+
+
+ }
+
+ header h2 {
+     color: $Desaturated_Blue;
+     }
+
+     .dark p {
+     color: $White;
+ }
+
+ label {
+  background: $Toggles;
+    }
+
+ .boll {
+     
+     background: $Dark_Desaturated_Blue;
+     }
+
+
+
+ 
+     
+ .card article {
+     background-color: $Dark_Desaturated_Blue;
+ }
+
+ .card article:hover {
+     background-color: $Dark_Grayish_Blue;
+ }
+
+ 
+
+ article {
+
+     p {
+         
+    color: $Desaturated_Blue;
+     }
+
+
+
+
+
+ }
+
+
+
+.card article:nth-child(1) .bar {
+     background-color: $Facebook;
+
+
+ }
+
+ .card article:nth-child(2) .bar {
+     background-color: $Twitter;
+
+ }
+
+ .card article:nth-child(3) .bar {
+     background: $Instagram;
+
+ }
+
+ .card article:nth-child(4) .bar {
+     background-color: $YouTube;
+
+ }
+
+
+
+.card article h1{
+color:$White;
+
+}
+
+.card article h4 {
+    color: $White;
+
+}
+ 
+
+
+
+@for $i from 1 to 5 {
+    .card article:nth-child(#{$i}) {
+        @if ($i<=3) {
+            h5 span {
+
+                color: $Lime_Green;
+            }
+            
+        }
+
+
+        @if ($i==4) {
+            h5 span {
+
+                color: $Bright_Red;
+            }
+        }
+    }
+
+
+}
+
+
+
+
+
+}
+
+
+
+
+body .overview {
+
+    h1 {
+        color:$White;
+        
+    }
+    
+
+    
+
+    @for $i from 1 to 5 {
+        .card2 article:nth-child(#{$i}) {
+           
+            background-color: $Dark_Desaturated_Blue;
+
+
+          
+
+            p:nth-child(1) span {
+                color: $Desaturated_Blue;
+                
+            }
+
+          
+
+            div h2 {
+                color: $White;
+                }
+
+          @if ($i==2) {
+                div span {
+                    color: $Bright_Red;
+                }
+
+            }
+
+            @if ($i !=2) {
+                div span {
+                    color: $Lime_Green;
+                }
+
+            }
+
+
+        }
+    }
+
+
+    @for $e from 1 to 5 {
+        .card2 article:nth-child(#{$e+4}) {
+           background-color: $Dark_Desaturated_Blue;
+
+
+            p:nth-child(1) span {
+               color: $Desaturated_Blue;
+               }
+
+            
+
+            div h2 {
+                color: $White;
+               }
+
+
+            
+
+            
+
+
+
+            @if ($e>2) {
+                div span {
+                    color: $Bright_Red;
+                }
+
+            }
+
+            @if ($e<=2) {
+                div span {
+                    color: $Lime_Green;
+                }
+
+            }
+
+
+
+
+        }
+    }
+
+
+    .card2 article:hover {
+        background: $Dark_Grayish_Blue;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+// theme claire
+
+
+.light_design {
+    background-color: $White
+
+}
+
+.light_design .dashboard {
+
+
+    header h1 {
+
+        color: $Very_Dark_Blue;
+
+
+
+    }
+
+    header h2 {
+        color: $Dark_Grayish_Blue;
+    }
+
+    .dark p {
+        color: $Dark_Grayish_Blue;
+    }
+
+    label {
+        background: $Toggles;
+    }
+
+    .boll {
+
+        background: $Dark_Desaturated_Blue;
+    }
+
+
+
+
+
+    .card article {
+        background-color: $Light_Grayish_Blue;
+        cursor: pointer;
+    }
+    .card article:hover {
+        background-color: $Toggle;
+        
+    }
+
+
+
+    article {
+
+        p {
+
+            color: $Dark_Grayish_Blue;
+        }
+
+
+
+
+
+    }
+
+
+
+    .card article:nth-child(1) .bar {
+        background-color: $Facebook;
+
+
+    }
+
+    .card article:nth-child(2) .bar {
+        background-color: $Twitter;
+
+    }
+
+    .card article:nth-child(3) .bar {
+        background: $Instagram;
+
+    }
+
+    .card article:nth-child(4) .bar {
+        background-color: $YouTube;
+
+    }
+
+   
+
+
+    .card article h1 {
+        color: $Very_Dark_Blue;
+
+    }
+
+    .card article h4 {
+        color: $Very_Dark_Blue;
+
+    }
+
+
+    
+
+
+@for $i from 1 to 5 {
+.card article:nth-child(#{$i}) {
+@if ($i<=3) {
+    h5 span{
+
+        color:$Lime_Green;
+    }
+}
+
+
+@if ($i==4) {
+    h5 span{
+
+color:$Bright_Red;
+    }
+}
+}
+    
+    
+}
+    
+
+
+
+
+
+}
+
+
+
+
+.light_design .overview {
+
+    h1 {
+        color: $Dark_Grayish_Blue;
+
+    }
+    .card2 article {
+        cursor: pointer;
+    }
+
+
+
+    @for $i from 1 to 5 {
+        .card2 article:nth-child(#{$i}) {
+
+            background-color: $Light_Grayish_Blue;
+
+
+
+
+            p:nth-child(1) span {
+                color: $Dark_Grayish_Blue;
+
+            }
+
+
+
+            div h2 {
+                color: $Very_Dark_Blue;
+            }
+
+            @if ($i==2) {
+                div span {
+                    color: $Bright_Red;
+                }
+
+            }
+
+            @if ($i !=2) {
+                div span {
+                    color: $Lime_Green;
+                }
+
+            }
+
+
+        }
+    }
+
+
+    @for $e from 1 to 5 {
+        .card2 article:nth-child(#{$e+4}) {
+            background-color: $Light_Grayish_Blue;
+
+
+            p:nth-child(1) span {
+                color: $Dark_Grayish_Blue;
+            }
+
+
+
+            div h2 {
+                color: $Very_Dark_Blue;
+            }
+
+
+
+
+
+
+
+
+            @if ($e>2) {
+                div span {
+                    color: $Bright_Red;
+                }
+
+            }
+
+            @if ($e<=2) {
+                div span {
+                    color: $Lime_Green;
+                }
+
+            }
+
+
+
+
+        }
+    }
+
+.card2 article:hover {
+    background-color: $Toggle;
+}
+
+}
