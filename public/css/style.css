@@ -118,41 +118,58 @@
     grid-column: 1;
     grid-row: 1;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 10px;
   }
   .dashboard .title {
     display: block;
     margin-top: 10px;
+    margin-left: 10px;
+    transform: translateY(-48px);
   }
-  .dashboard header h1 {
-    transform: translateY(22px);
-    font-weight: 700;
-    font-size: max(1.8vw, 0.5rem);
+  .dashboard .title::after {
+    content: " ";
+    width: 90vw;
+    height: 1px;
+    display: block;
+    background-color: #8b97c6;
+    transform: translateY(10px) translateX(-4px);
   }
-  .dashboard header h2 {
-    transform: translateY(25px);
+  .dashboard .title h1 {
+    margin-bottom: 5px;
+    font-weight: 900;
+    font-size: max(5vw, 0.5rem);
+    word-spacing: 3px;
+    letter-spacing: 3px;
+    text-align: left;
+  }
+  .dashboard .title h2 {
     font-weight: 400;
-    font-size: max(0.9vw, 0.5rem);
-  }
-  .dashboard input {
-    display: none;
+    font-size: max(2.9vw, 0.5rem);
+    text-align: left;
   }
   .dashboard .dark {
-    width: 180px;
+    width: 90vw;
     height: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 40px;
+    margin-top: -28px;
+    transform: translateX(7px);
   }
   .dashboard .dark p {
-    font-size: max(1vw, 0.5rem);
+    font-size: max(4vw, 0.5rem);
     font-weight: 700;
+    text-align: left;
   }
-  .dashboard label {
-    width: 80px;
-    height: 30px;
+  .dashboard .dark input {
+    display: none;
+  }
+  .dashboard .dark label {
+    width: 60px;
+    height: 20px;
     display: flex;
     align-items: center;
     position: relative;
@@ -160,35 +177,33 @@
   }
   .dashboard .boll {
     position: absolute;
-    width: 25px;
-    height: 25px;
+    width: 17px;
+    height: 17px;
     border-radius: 50%;
     left: 4px;
-    right: 4px;
-    transform: translateX(0px);
+    transform: translateX(-2px);
     transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
   .dashboard input:checked + label .boll {
-    transform: translateX(50px);
+    transform: translateX(36px);
   }
   .dashboard .card {
     grid-column: 1;
     grid-row: 2;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    grid-gap: 30px;
-    flex-direction: row;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 20px;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    max-width: 1100px;
+    justify-content: center;
+    max-width: 90vw;
     width: 100%;
-    max-height: 220px;
-    height: 100%;
-    margin-top: 30px;
+    margin-top: -40px;
+    margin-left: 20px;
   }
   .dashboard .card article {
-    height: 200px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -198,7 +213,7 @@
   .dashboard .card article .bar {
     width: 100%;
     height: 5px;
-    transform: translateY(-13.5px);
+    transform: translateY(-4.5px);
     border-radius: 20px 20px 0px 0px;
   }
   .dashboard article p {
@@ -206,25 +221,32 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    font-size: max(0.8vw, 0.2rem);
+    font-size: max(4vw, 0.2rem);
   }
   .dashboard article h1 {
-    font-size: max(3vw, 0.2rem);
+    font-size: max(8vw, 0.2rem);
   }
   .dashboard article h4 {
-    font-size: max(1vw, 0.2rem);
+    font-size: max(4vw, 0.2rem);
     font-weight: 100;
     letter-spacing: 3px;
     transform: translateY(-10px);
     transform: to-upper-case;
+    letter-spacing: 4px;
   }
   .dashboard article h5 {
-    max-width: 59px;
+    max-width: 79px;
     width: 99%;
     display: flex;
     justify-content: space-between;
-    font-size: max(0.6vw, 0.2rem);
     margin-bottom: 10px;
+  }
+  .dashboard article h5 img {
+    max-width: 10px;
+    width: 99%;
+  }
+  .dashboard article h5 span {
+    font-size: max(2.6vw, 0.2rem);
   }
 }
 @media screen and (min-width: 376px) {
@@ -550,24 +572,26 @@
 @media screen and (max-width: 375px) {
   .overview h1 {
     font-weight: 600;
-    font-size: max(1.8vw, 0.5rem);
-    margin-top: 20px;
+    font-size: max(4.8vw, 0.5rem);
+    margin-top: 30px;
+    word-spacing: 5px;
   }
   .overview .card2 {
-    max-width: 1100px;
-    width: 100%;
-    height: 220px;
+    width: 95%;
+    height: max-content;
     margin-top: 20px;
+    margin-bottom: 50px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    flex-direction: row;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    flex-direction: column;
     grid-gap: 20px;
   }
   .overview .card2 article:nth-child(1) {
     grid-row: 1;
     grid-column: 1;
     border-radius: 4px;
+    height: 120px;
   }
   .overview .card2 article:nth-child(1) p:nth-child(1) {
     width: 100%;
@@ -576,7 +600,7 @@
     margin-top: 20px;
   }
   .overview .card2 article:nth-child(1) p:nth-child(1) span {
-    font-size: max(1vw, 0.2rem);
+    font-size: max(3.7vw, 0.2rem);
     font-weight: 500;
   }
   .overview .card2 article:nth-child(1) div {
@@ -586,10 +610,10 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .overview .card2 article:nth-child(1) div h2 {
-    font-size: max(2vw, 0.2rem);
+    font-size: max(5vw, 0.2rem);
   }
   .overview .card2 article:nth-child(1) div p {
     width: 50px;
@@ -605,9 +629,10 @@
     margin-right: -20px;
   }
   .overview .card2 article:nth-child(2) {
-    grid-row: 1;
-    grid-column: 2;
+    grid-row: 2;
+    grid-column: 1;
     border-radius: 4px;
+    height: 120px;
   }
   .overview .card2 article:nth-child(2) p:nth-child(1) {
     width: 100%;
@@ -616,7 +641,7 @@
     margin-top: 20px;
   }
   .overview .card2 article:nth-child(2) p:nth-child(1) span {
-    font-size: max(1vw, 0.2rem);
+    font-size: max(3.7vw, 0.2rem);
     font-weight: 500;
   }
   .overview .card2 article:nth-child(2) div {
@@ -626,10 +651,10 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .overview .card2 article:nth-child(2) div h2 {
-    font-size: max(2vw, 0.2rem);
+    font-size: max(5vw, 0.2rem);
   }
   .overview .card2 article:nth-child(2) div p {
     width: 50px;
@@ -645,9 +670,10 @@
     margin-right: -20px;
   }
   .overview .card2 article:nth-child(3) {
-    grid-row: 1;
-    grid-column: 3;
+    grid-row: 3;
+    grid-column: 1;
     border-radius: 4px;
+    height: 120px;
   }
   .overview .card2 article:nth-child(3) p:nth-child(1) {
     width: 100%;
@@ -656,7 +682,7 @@
     margin-top: 20px;
   }
   .overview .card2 article:nth-child(3) p:nth-child(1) span {
-    font-size: max(1vw, 0.2rem);
+    font-size: max(3.7vw, 0.2rem);
     font-weight: 500;
   }
   .overview .card2 article:nth-child(3) div {
@@ -666,10 +692,10 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .overview .card2 article:nth-child(3) div h2 {
-    font-size: max(2vw, 0.2rem);
+    font-size: max(5vw, 0.2rem);
   }
   .overview .card2 article:nth-child(3) div p {
     width: 50px;
@@ -682,9 +708,10 @@
     height: 8px;
   }
   .overview .card2 article:nth-child(4) {
-    grid-row: 1;
-    grid-column: 4;
+    grid-row: 4;
+    grid-column: 1;
     border-radius: 4px;
+    height: 120px;
   }
   .overview .card2 article:nth-child(4) p:nth-child(1) {
     width: 100%;
@@ -693,7 +720,7 @@
     margin-top: 20px;
   }
   .overview .card2 article:nth-child(4) p:nth-child(1) span {
-    font-size: max(1vw, 0.2rem);
+    font-size: max(3.7vw, 0.2rem);
     font-weight: 500;
   }
   .overview .card2 article:nth-child(4) div {
@@ -703,10 +730,10 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .overview .card2 article:nth-child(4) div h2 {
-    font-size: max(2vw, 0.2rem);
+    font-size: max(5vw, 0.2rem);
   }
   .overview .card2 article:nth-child(4) div p {
     width: 50px;
@@ -719,9 +746,10 @@
     height: 8px;
   }
   .overview .card2 article:nth-child(5) {
-    grid-row: 2;
+    grid-row: 5;
     grid-column: 1;
     border-radius: 4px;
+    height: 120px;
   }
   .overview .card2 article:nth-child(5) p:nth-child(1) {
     width: 100%;
@@ -730,7 +758,7 @@
     margin-top: 20px;
   }
   .overview .card2 article:nth-child(5) p:nth-child(1) span {
-    font-size: max(1vw, 0.2rem);
+    font-size: max(3.7vw, 0.2rem);
     font-weight: 500;
   }
   .overview .card2 article:nth-child(5) div {
@@ -740,10 +768,10 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .overview .card2 article:nth-child(5) div h2 {
-    font-size: max(2vw, 0.2rem);
+    font-size: max(5vw, 0.2rem);
   }
   .overview .card2 article:nth-child(5) div p {
     width: 50px;
@@ -756,9 +784,10 @@
     height: 8px;
   }
   .overview .card2 article:nth-child(6) {
-    grid-row: 2;
-    grid-column: 2;
+    grid-row: 6;
+    grid-column: 1;
     border-radius: 4px;
+    height: 120px;
   }
   .overview .card2 article:nth-child(6) p:nth-child(1) {
     width: 100%;
@@ -767,7 +796,7 @@
     margin-top: 20px;
   }
   .overview .card2 article:nth-child(6) p:nth-child(1) span {
-    font-size: max(1vw, 0.2rem);
+    font-size: max(3.7vw, 0.2rem);
     font-weight: 500;
   }
   .overview .card2 article:nth-child(6) div {
@@ -777,10 +806,10 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .overview .card2 article:nth-child(6) div h2 {
-    font-size: max(2vw, 0.2rem);
+    font-size: max(5vw, 0.2rem);
   }
   .overview .card2 article:nth-child(6) div p {
     width: 50px;
@@ -793,9 +822,10 @@
     height: 8px;
   }
   .overview .card2 article:nth-child(7) {
-    grid-row: 2;
-    grid-column: 3;
+    grid-row: 7;
+    grid-column: 1;
     border-radius: 4px;
+    height: 120px;
   }
   .overview .card2 article:nth-child(7) p:nth-child(1) {
     width: 100%;
@@ -804,7 +834,7 @@
     margin-top: 20px;
   }
   .overview .card2 article:nth-child(7) p:nth-child(1) span {
-    font-size: max(1vw, 0.2rem);
+    font-size: max(3.7vw, 0.2rem);
     font-weight: 500;
   }
   .overview .card2 article:nth-child(7) div {
@@ -814,10 +844,10 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .overview .card2 article:nth-child(7) div h2 {
-    font-size: max(2vw, 0.2rem);
+    font-size: max(5vw, 0.2rem);
   }
   .overview .card2 article:nth-child(7) div p {
     width: 50px;
@@ -830,9 +860,10 @@
     height: 8px;
   }
   .overview .card2 article:nth-child(8) {
-    grid-row: 2;
-    grid-column: 4;
+    grid-row: 8;
+    grid-column: 1;
     border-radius: 4px;
+    height: 120px;
   }
   .overview .card2 article:nth-child(8) p:nth-child(1) {
     width: 100%;
@@ -841,7 +872,7 @@
     margin-top: 20px;
   }
   .overview .card2 article:nth-child(8) p:nth-child(1) span {
-    font-size: max(1vw, 0.2rem);
+    font-size: max(3.7vw, 0.2rem);
     font-weight: 500;
   }
   .overview .card2 article:nth-child(8) div {
@@ -851,10 +882,10 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .overview .card2 article:nth-child(8) div h2 {
-    font-size: max(2vw, 0.2rem);
+    font-size: max(5vw, 0.2rem);
   }
   .overview .card2 article:nth-child(8) div p {
     width: 50px;
@@ -1255,23 +1286,25 @@ body {
   body {
     box-sizing: border-box;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow-y: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     font-family: "Inter", sans-serif;
     transition: 0.2s linear;
   }
 
   main {
-    max-width: 375px;
     width: 100%;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 0px;
+    align-items: center;
+    justify-content: center;
   }
   main .dashboard {
     grid-column: 1;
@@ -1279,10 +1312,13 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 3fr;
+    align-items: center;
+    justify-content: center;
   }
   main .overview {
     grid-column: 1;
     grid-row: 2;
+    margin-left: 17px;
   }
 }
 

@@ -109,18 +109,19 @@
          box-sizing: border-box;
          //  background: ; 
          width: 100vw;
-         height: 100vh;
+         height: 100%;
          display: flex;
          align-items: center;
          justify-content: center;
-         overflow-y: hidden;
+         overflow-x: hidden;
+         overflow-y: scroll;
          font-family: 'Inter', sans-serif;
          transition: 0.2s linear;
 
      }
 
     main {
-        max-width:375px;
+        // max-width:375px;
         width:100%;
         height: 100vh;
 
@@ -130,6 +131,8 @@
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         grid-gap: 0px;
+        align-items: center;
+        justify-content: center;
 
 
 
@@ -147,6 +150,8 @@
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 3fr;
+            align-items: center;
+            justify-content: center;
 
         }
 
@@ -159,6 +164,7 @@
             grid-column: 1;
             grid-row: 2;
             //   background: red;
+            margin-left:17px;
 
 
         }
